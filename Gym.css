@@ -1,328 +1,415 @@
-*{
-    margin:0%;
-    padding:0%;
+/* Base Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
+/* Global */
+body {
     background-color: rgb(1,1,14);
-    font-family:'Roboto','sans-serif';
-    color:white;
+    font-family: 'Roboto', sans-serif;
+    color: white;
 }
 
-nav{
-    position:fixed;
-    width:100%;
-    display:flex;
+nav {
+    position: fixed;
+    width: 100%;
+    display: flex;
     justify-content: space-between;
     background-color: rgb(1,1,14);
     padding: 22px;
     box-shadow: 0px 2px 6px 2px rgb(31,30,30);
     align-items: center;
+    z-index: 100;
 }
 
-nav ul li a{
-    margin-inline:22px;
-    text-decoration: None;
-    color:white;
-}
-
-ul li{
-    list-style:None;
-}
-
-nav ul{
+nav ul {
+    display: flex;
     margin-right: 63px;
-    margin-top:6px;
+    margin-top: 6px;
 }
 
-.logo{
-    font-size:25px;
-    margin-left:33px;
-    color:rgb(42,250,20);
+nav ul li {
+    list-style: none;
 }
 
-ul li button{
-    width:100px;
-    height:33px;
-    background-color:rgb(4,180,4);
-    border:None;
-    color:white;
-    font-size:18px;
+nav ul li a {
+    margin-inline: 22px;
+    text-decoration: none;
+    color: white;
 }
 
-ul li button:hover{
-    border:2px solid white;
-    background-color:transparent;
-    color:rgb(20,251,20);
-
+nav ul li button {
+    width: 100px;
+    height: 33px;
+    background-color: rgb(4,180,4);
+    border: none;
+    color: white;
+    font-size: 18px;
 }
 
-ul li a:hover{
-    color:rgb(20,251,20);
+nav ul li button:hover {
+    border: 2px solid white;
+    background-color: transparent;
+    color: rgb(20,251,20);
+}
+
+nav ul li a:hover {
+    color: rgb(20,251,20);
     border-bottom: 2px solid rgb(20,251,20);
 }
 
-/* main */
+.logo {
+    font-size: 25px;
+    margin-left: 33px;
+    color: rgb(42,250,20);
+}
 
-.home{
+/* Home Section */
+.home {
     display: flex;
     justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
 }
 
-.home img{
-    width:59%;
-    margin-top:130px;
-    margin-left:-174px;
+.home img {
+    width: 59%;
+    max-width: 600px;
+    margin-top: 130px;
+    margin-left: -174px;
 }
 
- .home .homeText{
-    margin-top:200px;
-    margin-left:44px;
+.home .homeText {
+    margin-top: 200px;
+    margin-left: 44px;
+    max-width: 400px;
 }
 
-.homeText h1{
-    font-size:85px;
-    color:rgb(55,248,55);
+.homeText h1 {
+    font-size: 85px;
+    color: rgb(55,248,55);
+    line-height: 1.1;
 }
 
-.homeText h3{
-    margin-top:22px;
-    font-size:22px;
+.homeText h3 {
+    margin-top: 22px;
+    font-size: 22px;
 }
 
-.homeText p{
-    margin-top:22px;
-    color:silver;
+.homeText p {
+    margin-top: 22px;
+    color: silver;
 }
 
-.homeText button{
-    margin-top:22px;
-    font-size:22px;
-    width:140px;
+.homeText button {
+    margin-top: 22px;
+    font-size: 22px;
+    width: 140px;
     height: 40px;
-    background-color:green;
-    color:white;
-    border:None;
+    background-color: green;
+    color: white;
+    border: none;
 }
 
-.homeText button:hover{
-    border:2px solid white;
+.homeText button:hover {
+    border: 2px solid white;
     background-color: transparent;
-    color:rgb(23,252,23);
+    color: rgb(23,252,23);
 }
 
-.head{
-    text-align:center;
-    padding:70px;
+/* Head Section */
+.head {
+    text-align: center;
+    padding: 70px 20px;
 }
 
-.head span{
-    color:rgb(34,244,37);
+.head span {
+    color: rgb(34,244,37);
 }
 
-.ourProgram{
-    display:flex;
+/* Our Program */
+.ourProgram {
+    display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
+    padding: 40px 20px;
 }
 
-.ourProgram .crd{
-    margin-inline:22px;
-    text-align:center;
+.ourProgram .crd {
+    margin: 22px;
+    text-align: center;
 }
 
-.ourProgram .crd img{
-    transition-property: transform;
-    transition-duration: 0.5s;
-    transition-timing-function: ease-in;
+.ourProgram .crd img {
+    transition: transform 0.5s ease-in;
 }
 
-.ourProgram .crd img:hover{
-    transform:scale(1.1);
+.ourProgram .crd img:hover {
+    transform: scale(1.1);
 }
 
-.ourPlan{
-    display:flex;
+/* Our Plan */
+.ourPlan {
+    display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    padding: 40px 20px;
 }
 
-
-
-.ourPlan .card{
-    width:300px;
-    height:400px;
-    padding:4px;
+.ourPlan .card {
+    width: 300px;
+    height: 400px;
+    padding: 4px;
     background-color: rgb(36,35,35);
-    text-align:center;
-    margin-inline:22px;
+    text-align: center;
+    margin: 22px;
+    transition: all 0.7s ease;
 }
 
-.card i{
-    font-size:27px;
-    margin-top:22px;
-    color:orange;
+.ourPlan .card:hover {
+    width: 310px;
+    height: 440px;
+    background-color: black;
+    font-size: 19px;
+    cursor: pointer;
 }
 
-.rupee-icon{
-    color:white!important;
-    text-decoration: None;
-}
-.card h1,h3{
-    color:rgb(32,255,32);
+.card i {
+    font-size: 27px;
+    margin-top: 22px;
+    color: orange;
 }
 
-.card h3,h1,button{
+.rupee-icon {
+    color: white !important;
+    text-decoration: none;
+}
+
+.card h1,
+.card h3 {
+    color: rgb(32,255,32);
     margin-top: 20px;
 }
 
-.card p{
-    margin-top:10px;
+.card p {
+    margin-top: 10px;
 }
 
-.card button{
-    width:100px;
-    height:48px;
+.card button {
+    width: 100px;
+    height: 48px;
     background-color: orange;
-    border:none;
-    color:white;
-    font-size:18px;
+    border: none;
+    color: white;
+    font-size: 18px;
+    margin-top: 20px;
 }
 
-.card button:hover{
-    border:2px solid white;
+.card button:hover {
+    border: 2px solid white;
     background-color: transparent;
-    color:orange;
-    cursor:pointer;
+    color: orange;
+    cursor: pointer;
 }
 
-.card:hover{
-    transition: 0.7s ease;
-    width:310px;
-    height:440px;
-    background-color: black;
-    font-size:19px;
-    cursor:pointer;
-}
-
-/*blog */
-.ourBlog{
-    display:flex;
+/* Blog Section */
+.ourBlog {
+    display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    padding: 40px 20px;
 }
 
-.blogCard{
-    width:300px;
-    height:400px;
+.blogCard {
+    width: 300px;
+    height: 400px;
     background-color: rgb(42,41,41);
-    margin-inline:22px;
+    margin: 22px;
+    position: relative;
 }
 
-.blogCard img{
-    width:100%;
+.blogCard img {
+    width: 100%;
 }
 
-.blogCard p{
-    margin-top:22px;
+.blogText {
+    margin: 11px 6px;
 }
 
-.blogText a{
+.blogText p {
+    margin-top: 22px;
+}
+
+.blogText a {
     text-decoration: none;
     width: 90px;
-    position: absolute;
-    margin-top:80px;
-    color:green;
-    margin-top: 22px;
-    cursor:pointer; 
+    color: green;
+    cursor: pointer;
 }
 
-
-.blogText a:hover{
+.blogText a:hover {
     border-bottom: 1px solid green;
 }
 
-.blogText{
-    margin-top:11px;
-    margin-left:6px;
-}
-
-/* contact */
-
-.contactPage{
-    display:flex;
+/* Contact Section */
+.contactPage {
+    display: flex;
     justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 40px 20px;
 }
 
-.contactText{
-    margin-left:33px;
-    color:rgb(33,249,33);
-    margin-top:134px;
-    font-size:33px;
+.contactText {
+    flex: 1;
+    margin: 20px 33px;
+    color: rgb(33,249,33);
+    font-size: 33px;
+    max-width: 400px;
 }
 
-.contactPage img{
-    width:60%;
-    margin-left:-33px;
+.contactPage img {
+    flex: 1;
+    width: 60%;
+    max-width: 500px;
+    margin: 20px;
 }
 
-.contactUS{
-    text-align:center;
+.contactUS {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    margin: 22px auto;
+}
+
+.contactUS input {
+    width: 100%;
+    padding: 8px;
+    height: 33px;
+    border-radius: 2px;
+    border: none;
+    outline: none;
+    font-size: 22px;
+    margin-top: 18px;
+}
+
+.contactUS button {
+    width: 100%;
+    padding: 12px;
+    height: 45px;
+    background-color: rgb(2,191,2);
+    border: none;
+    font-size: 22px;
+    color: white;
+    border-radius: 2px;
     margin-top: 22px;
 }
 
-.contactUS input{
-    width:350px;
-    padding:8px;
-    height:33px;
-    border-radius:2px;
-    border:none;
-    outline:none;
-    font-size: 22px;
-    margin-top:18px;
-}
-
-.contactUS button{
-    width:365px;
-    height:45px;
-    background-color: rgb(2,191,2);
-    border:none;
-    font-size:22px;
-    color:white;
-    border-radius:2px;
-    margin-top:22px;
-}
-
-.contactUS button:hover{
+.contactUS button:hover {
     border: 2px solid white;
     background-color: transparent;
-    color: rgb(27, 246, 27);
-    cursor:pointer;
-  }
+    color: rgb(27,246,27);
+    cursor: pointer;
+}
 
-.footer{
-    display:flex;
-    justify-content:center;
-    margin-top:53px;
-    padding:22px;
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 53px;
+    padding: 22px;
     box-shadow: 0px 2px 6px 4px rgb(36,36,36);
 }
 
-.footer .footertext{
-    margin-inline:73px;
-    margin-top:33px;
+.footer .footertext {
+    margin: 33px 73px;
+    text-align: center;
 }
 
-.footertext p{
-    margin-top:11px;
-    color:silver;
+.footertext p {
+    margin-top: 11px;
+    color: silver;
 }
 
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+    .home {
+        flex-direction: column-reverse;
+        padding: 60px 20px;
+    }
+    .home img {
+        width: 80%;
+        margin: 0;
+    }
+    .home .homeText {
+        margin: 20px 0;
+        text-align: center;
+    }
+    nav ul {
+        margin-right: 20px;
+    }
+}
 
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+    nav ul {
+        flex-wrap: wrap;
+        margin: 10px 0;
+    }
+    nav ul li a,
+    nav ul li button {
+        margin: 10px;
+    }
+    .homeText h1 {
+        font-size: 60px;
+    }
+    .ourProgram,
+    .ourPlan,
+    .ourBlog,
+    .contactPage {
+        padding: 20px 10px;
+    }
+    .ourPlan .card,
+    .blogCard {
+        width: 45%;
+        margin: 10px;
+    }
+    .contactText {
+        font-size: 28px;
+        margin: 10px;
+    }
+}
 
-
-
-
-
-
-
-
-
+@media (max-width: 480px) {
+    .homeText h1 {
+        font-size: 40px;
+    }
+    .homeText h3,
+    .head span {
+        font-size: 18px;
+    }
+    .ourPlan .card,
+    .blogCard {
+        width: 100%;
+        margin: 10px 0;
+    }
+    .contactPage {
+        flex-direction: column;
+    }
+    .contactPage img,
+    .contactText {
+        width: 100%;
+        margin: 10px 0;
+    }
+    .footer .footertext {
+        margin: 10px 0;
+    }
+}
